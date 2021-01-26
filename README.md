@@ -1,16 +1,18 @@
 # PersonGraphDataSet
-PersonGraphDataSet, nearly 10 thousand person2person relationship facts that build from extraction method, which can be applied to person kg search and inference applications。  
-人物图谱数据集，近十万的人物关系图谱事实数据库，通过人物关系抽取算法抽取+人工整理得出，可用于人物关系搜索、查询、人物关系多跳问答，以及人物关系推理等场景提供基础数据。
+PersonGraphDataSet, nearly 10 thousand person2person relationship facts that build from extraction method, which can be applied to person kg search and inference applications。  人物图谱数据集，近十万的人物关系图谱事实数据库，通过人物关系抽取算法抽取+人工整理得出，可用于人物关系搜索、查询、人物关系多跳问答，以及人物关系推理等场景提供基础数据。
 
-# 项目的由来
+# 项目由来
 关于为什么要开放这个项目，主要有以下几个方面的缘由：  
 1、阶段性总结。以刻画人物复杂关系为核心的网络关系网构建，居于十分重要的现实意义，两年前，带着个人兴趣，发布了一个未完成版的人物关系知识图谱项目(https://github.com/liuhuanyong/PersonRelationKnowledgeGraph)，尝试采用基于知识库的数据回标,基于远程监督与bootstrapping方法的人物关系抽取，并以此完成基于知识图谱的知识问答等应用。但但由于工作时间为题，一直没能更新。今天，先对该工作的一个结果数据集开放出来，以对之前的项目做一个阶段性的总结。  
 2、数据集空缺。目前，面向中文领域的人物关系抽取数据集，还相对较少，代表性有ccks2019的开放数据集（https://arxiv.org/abs/1907.12801） ，该数据集公开了亲属关系、社交关系、师生关系三大类，现夫、潜伏、朋友、恋人等34小类的人物关系数据集。该数据集是面向评测使用的，其所涉及的人物关系类型有限，并且不提供现成可用的人物关系数据。  
 3、应用驱动。当前，面向知识图谱入门级别的知识图谱推理、知识图谱可视化、知识问答、图谱搜索等场景，还缺乏可用的数据集。目前关于人物关系方面的应用，目前看到的，主要是百科类的展示以及搜狗人物图谱（https://www.sogou.com/tupu/person.html） 为代表，虽说是娱乐导向，但目前还缺乏这样的练手的数据和项目。  
 4、应用支撑。基于开放出来的人物关系知识数据，大家可以在此基础上进行多种应用尝试，包括算法训练、知识图谱入门、培训等等，这十分有意义。  
  
-# 项目的构成
-本项目一共
+# 项目构成
+本项目一共包括三个文件，分别记录人物关系元组信息以及关系类型信息：
+1、big_rel_distribution.txt：大类关系及其分布文件。
+2、person_rel_kg.data：人物关系图谱数据集文件。  
+3、small_rel_distribution.txt：小类关系及其分布文件    
 
 # 数据概况
 本数据集，一共包括97,158条人物关系数据，涉及人物71,243个，大类关系102个，小类关系266条，大致的情况具体如下：    
@@ -22,7 +24,7 @@ PersonGraphDataSet, nearly 10 thousand person2person relationship facts that bui
 | 大类关系数 | 102 | 父亲、母亲、朋友 | 
 | 小类关系数 | 266 | 闺蜜、女好友、前妻 | 
 
-# 数据关系类型
+# 关系类型
 本数据集对人物关系进行了上下级分类，针对小类关系进一步归类整理成了若干个大类，选取小类数大于3的大类进行展示，如下表所示：
 | 关系大类 | 关系小类 |
 | :--- | :--- |
@@ -98,7 +100,6 @@ PersonGraphDataSet, nearly 10 thousand person2person relationship facts that bui
 | 信息抽取 | 特征增强 | 根据结构化人物关系数据，将用户的关联关系作为某个用户的某个特征 | 
 | 信息推荐 | 人物推荐 | 根据关注某个人物，类推出与该人物相关的其他人物 | 
 | 用户画像 | 人物建模 | 利用某个人物的关联信息，对其进行特征表示和画像建模 | 
-
 
 # 项目总结
 1、本项目开放了一个人物关系知识图谱数据集，一共包括97,158条人物关系数据，涉及人物71,243个，大类关系102个，小类关系266条。  
